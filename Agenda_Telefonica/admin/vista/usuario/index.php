@@ -24,7 +24,7 @@ if (!isset($_SESSION['isLogged']) || $_SESSION['isLogged'] === FALSE) {
             <input type="button" id="buscar" name="buscar" value="Buscar cedula" onclick="buscarPorCedula()">
         </form>
         <br>
-        <div id="informacion"><b>Datos de la persona</b></div>
+        <div id="informacion"><b>Datos de la persona</b></div><br>
 
     </header>
 
@@ -56,7 +56,9 @@ if (!isset($_SESSION['isLogged']) || $_SESSION['isLogged'] === FALSE) {
                 echo " <td>" . $row['usu_rol'] . "</td>";
                 echo " <td> <a href='eliminar.php?codigo=" . $row['usu_codigo'] . "'>Eliminar</a> </td>";
                 echo " <td> <a href='modificar.php?codigo=" . $row['usu_codigo'] . "'>Modificar</a> </td>";
-                echo " <td> <a href='cambiar_contrasena.php?codigo=" . $row['usu_codigo'] . "'>Cambiar contraseña</a> </td>";
+                echo " <td> <a href='cambiar_contrasena.php?codigo=" . $row['usu_codigo'] . "'>Cambiar contraseña</a> </td>";  
+                echo " <td> <a href='agregar_telefono.php?codigo=" . $row['usu_codigo'] . "'>Agregar Telefono</a> </td>";       
+                echo " <td> <a href='lista_tele.php?codigo=" . $row['usu_codigo'] . "'>Lista de Telefono</a> </td>";                         
                 echo "</tr>";
             }
         } else {
@@ -64,8 +66,11 @@ if (!isset($_SESSION['isLogged']) || $_SESSION['isLogged'] === FALSE) {
             echo " <td colspan='7'> No existen usuarios registradas en el sistema </td>";
             echo "</tr>";
         }
+        
         $conn->close();
         ?>
+
+    <input type="button" id="telefonos" name="agregar" value="Agregar Telefonos" onclick="">
     </table>
 
 
