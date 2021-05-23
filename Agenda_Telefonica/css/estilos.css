@@ -1,0 +1,41 @@
+.formu {
+    border: 1px solid chartreuse;
+    margin: 20px 200px;
+    float: center;
+    position: relative;
+    margin-left: 30%;
+}
+
+.largos {
+    position: relative;
+    margin-left: 20%;
+    width: 270px;
+}
+
+label {
+
+    position: relative;
+    margin-left: 15%;
+}
+
+input {
+    width: 200px;
+    color: black;
+}
+
+body {
+    background-color:black;
+}
+
+h1 {
+    float: center;
+    margin: 20px 380px;
+}
+
+
+
+.boton {
+    position: relative;
+    margin-left: 15%;
+    width: 100px;
+}

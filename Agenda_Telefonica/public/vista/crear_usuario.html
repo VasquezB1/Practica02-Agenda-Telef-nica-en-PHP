@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    <script type="text/javascript" src="validaciones.js"></script>
+    <style type="text/css">
+        .error {
+            color: red;
+
+        }
+
+        @font-face {
+            font-family: Fondamento;
+            src: url(../letras/Architects_Daughter/ArchitectsDaughter-Regular.ttf);
+        }
+
+        * {
+            font-family: 'Fondamento';
+            color: white;
+        }
+    </style>
+    <link href="../../css/estilos.css" rel="stylesheet" />
+</head>
+
+<body>
+    <h1>Formulario Programacion Hipermedial</h1>
+    <form class="formu" id="formulario01" method="POST" action="../controladores/crear_usuario.php"
+        onsubmit="return validarCamposObligatorios()">
+        <br>
+        <label for="cedula">Cedula (*)</label>
+        <input type="text" id="cedula" name="cedula" value="" placeholder="Ingrese su número de cédula"
+            onkeyup="return valCedula(this)" />
+        <span id="mensajeced" class="error"></span>
+        <br><br>
+
+        <label for="nombres">Nombres (*)</label>
+        <input type="text" id="nombres" name="nombres" value="" placeholder="Ingrese sus dos nombres"
+            onkeyup="return validarNombres(this)" />
+        <span id="mensajeNombres" class="error"></span>
+        <br><br>
+
+        <label for="apellidos">Apellidos (*)</label>
+        <input type="text" id="apellidos" name="apellidos" value="" placeholder="Ingrese sus dos apellidos"
+            onkeyup="return validarApellidos(this)" />
+        <span id="mensajeApellidos" class="error"></span>
+        <br><br>
+
+        <label for="direccion">Direccion (*)</label>
+        <input type="text" id="direccion" name="direccion" value="" placeholder="Ingrese su dirección" />
+        <span id="mensajeDirecion" class="error"></span>
+        <br><br>
+
+        <label for="correo">Correo Electrónico (*)</label>
+        <input class="largos" type="email" id="correo" name="correo" value=""
+            placeholder="Ingrese su correo electrónico" onkeyup="validarCorreo(this)" />
+        <span id="mensajeCorreo" class="error"></span>
+        <br><br>
+
+        <label for="contrasena">Contraseña (*)</label>
+        <input type="password" id="contrasena" name="contrasena" value="" placeholder="Ingrese su contraseña"
+            onkeyup="return validarContra(this)" />
+        <span id="mensajeContra" class="error"></span>
+        <br><br>
+
+        <label for="fecha">Fecha Nacimiento (*)</label>
+        <input class="largos" type="text" id="fecha" name="fecha" value=""
+            placeholder="Ingrese su fecha de nacimiento (yyyy-mm-dd)" onkeyup="return validarFecha(this)" />
+        <span id="mensajeFechaNac" class="error"></span>
+        <br><br>
+
+        <label for="rol">Rol Usuario (*)</label>
+
+        <select class="largos" id="rol" name="rol">
+            <option>Admin</option>
+            <option>User</option>
+        </select>
+        <span id="mensajerol" class="error"></span>
+        <br><br>
+
+
+        <input class="boton" type="submit" id="crear" name="crear" value="Aceptar" />
+        <input class="boton" type="reset" id="cancelar" name="cancelar" value="Cancelar" />
+        <br><br>
+    </form>
+    <a class="login" href="login.html">
+        <center>LOGIN </center>
+    </a>
+</body>
+
+
+</html>
