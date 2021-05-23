@@ -2,5 +2,5 @@
  session_start(); 
  $_SESSION['isLogged'] = FALSE;
  session_destroy();
- header("Location: /");
+ header("Location: /Agenda_Telefonica/public/vista/login.html");
 ?>

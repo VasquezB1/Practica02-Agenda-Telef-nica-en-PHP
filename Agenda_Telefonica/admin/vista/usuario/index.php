@@ -69,8 +69,6 @@ if (!isset($_SESSION['isLogged']) || $_SESSION['isLogged'] === FALSE) {
         
         $conn->close();
         ?>
-
-    <input type="button" id="telefonos" name="agregar" value="Agregar Telefonos" onclick="">
     </table>
 
 

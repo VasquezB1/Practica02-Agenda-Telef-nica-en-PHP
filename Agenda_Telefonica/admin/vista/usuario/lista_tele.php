@@ -59,7 +59,7 @@
     <a class="cerrar" href="../../../config/cerrar_sesion.php">Cerrar Sesion</a>
     <br>
     <br>
-    <a class="Formulario" href="../../../public/vista/crear_usuario.html">Crear Usuarios</a>
+    <a class="Formulario" href="../../../admin/vista/usuario/index.php">Volver</a>
     <br>
 </footer>
 
