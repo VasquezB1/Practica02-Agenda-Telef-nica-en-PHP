@@ -39,7 +39,7 @@
             }
         } else {
             echo "<tr>";
-            echo " <td colspan='7'> No existen usuarios registrados </td>";
+            echo " <td colspan='7'> No existen telefonos registrados </td>";
             echo "</tr>";
         }
         
