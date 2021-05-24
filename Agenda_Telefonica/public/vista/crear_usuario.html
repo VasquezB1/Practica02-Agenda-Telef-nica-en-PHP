@@ -5,12 +5,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulario</title>
-    <script type="text/javascript" src="validaciones.js"></script>
+    <script type="text/javascript" src="../../js/validaciones_usuarios.js"></script>
     <style type="text/css">
-        .error {
-            color: red;
-
-        }
+    .error {
+    color: red;
+    font-size: 12px;
+    }
+    .bien{
+    color: black;
+    font-size: 12px;
+    }
 
         @font-face {
             font-family: Fondamento;
@@ -32,8 +36,8 @@
         <br>
         <label for="cedula">Cedula (*)</label>
         <input type="text" id="cedula" name="cedula" value="" placeholder="Ingrese su número de cédula"
-            onkeyup="return valCedula(this)" />
-        <span id="mensajeced" class="error"></span>
+            onkeyup="return validarCedula(this)" />
+        <span id="mensajeCedula" class="error"></span>
         <br><br>
 
         <label for="nombres">Nombres (*)</label>
@@ -61,7 +65,7 @@
 
         <label for="contrasena">Contraseña (*)</label>
         <input type="password" id="contrasena" name="contrasena" value="" placeholder="Ingrese su contraseña"
-            onkeyup="return validarContra(this)" />
+        onkeyup="return validarPassword(this)" onblur="validarCaracteres()" />
         <span id="mensajeContra" class="error"></span>
         <br><br>
 
