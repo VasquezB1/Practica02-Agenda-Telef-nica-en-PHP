@@ -9,15 +9,18 @@
 </head>
 
 <body>
-    <h2>Buscar Información</h2>
+    <center><h1>Buscar Telefono Usuario</h1></center>
 
     <header>
-        <form onsubmit="return buscarxpCedula()">
+        
             <input type="text" id="cedula" name="buscar" value="">
-            <input type="button" id="buscar" name="buscar" value="Buscar cedula" onclick="buscarxpCedula()">
-        </form>
-        <br>
+            <br><br>
+            <input type="button" id="buscar" name="buscar1" value="Buscar Por Cedula" onclick="buscarxpCedula()">
+            <input type="button" id="buscarCor" name="buscar2" value="Buscar Por Correo" onclick="buscarxpCorreo()">
+        
+        <br><br><br>
         <div id="informacion"><b>Datos de la persona</b></div><br>
+        
 
     </header>
 
@@ -26,7 +29,7 @@
 </body>
 <footer>
     <br>
-    <a class="cerrar" href="../../config/cerrar_sesion.php">Cerrar Sesion</a>
+    <a class="cerrar" href="../../config/cerrar_sesion.php">Login</a>
     <br>
     <br>
     
