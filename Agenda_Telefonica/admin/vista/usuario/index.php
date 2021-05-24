@@ -17,17 +17,20 @@ if (!isset($_SESSION['isLogged']) || $_SESSION['isLogged'] === FALSE) {
 
 <body>
 <center><h1>GESTION DE USUARIO---CONTROL USUARIO</h1></center>
-    <h2>Buscar Información</h2>
+<?php
+    $cod=$_GET["codigo"];
+    ?>
+    <nav>
+      <a href="listar_telefonos_cel.php?codigo=<?php echo $cod?>">Listar Telefonos Celulares</a>
+      <a href="listar_telefonos_con.php?codigo=<?php echo $cod?>">Listar Telefonos Convecionales</a>
+      <a href="../../../public/vista/buscar_cedula.html">Buscar Usuario por Cedula</a>
+      <a href="../../../public/vista/buscar_cedula.html">Buscar Telefonos por Cedula</a>
+      <a href="agregar_telefono.php?codigo=<?php echo $cod?>">Agregar Telefono</a>
+      <a href="modificar_usu.php?codigo=<?php echo $cod?>">Modificar Datos</a>
+      <a href="cambiar_contrasena.php?codigo=<?php echo $cod?>">Cambiar Contraseña</a>
 
-    <header>
-        <form onsubmit="return buscarPorCedula()">
-            <input type="text" id="cedula" name="buscar" value="">
-            <input type="button" id="buscar" name="buscar" value="Buscar cedula" onclick="buscarPorCedula()">
-        </form>
-        <br>
-        <div id="informacion"><b>Datos de la persona</b></div><br>
-
-    </header>
+ 
+   </nav>
     <?php
         include '../../../config/conexionBD.php';
         $codigo = $_GET["codigo"];
@@ -89,11 +92,6 @@ if (!isset($_SESSION['isLogged']) || $_SESSION['isLogged'] === FALSE) {
     <a class="cerrar" href="../../../config/cerrar_sesion.php">Cerrar Sesion</a>
     <br>
     <br>
-    <?php
-        
-        $cod = $_GET["codigo"];
-    echo "<a class='Formulario' href='agregar_telefono.php?codigo=".$cod."'>Agregar Numero</a>";
-    ?>
     <br>
 </footer>
 
