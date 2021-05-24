@@ -18,6 +18,12 @@
 </head>
 
 <body>
+<?php
+ session_start();
+ if(!isset($_SESSION['isLogged']) || $_SESSION['isLogged'] === FALSE){
+    header("Location: /Agenda_Telefonica/public/vista/login.html");
+ }
+?>
     <?php
     $codigo = $_GET["codigo"];
     ?>

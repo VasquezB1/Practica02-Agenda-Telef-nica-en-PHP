@@ -3,8 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Gestión de usuarios</title>
-    <script src="../../../js/buscarCedula.js" type="text/javascript"></script>
+    <title>Lista Usuarios Eliminados</title>
 
 </head>
 
@@ -15,7 +14,7 @@
     header("Location: /Agenda_Telefonica/public/vista/login.html");
  }
 ?>
-<h2>DATOS TELEFONO</h2>
+<center><h2>LISTA USUARIOS ELIMINADOS</h2></center>
     
 
     <table style="width:100%">
@@ -23,14 +22,14 @@
         <th>Cedula</th>
             <th>Nombres</th>
             <th>Apellidos</th>
-            <th>Telefono</th>
-            <th>Tipo</th>
-            <th>Operadora</th>
+            <th>Direccion</th>
+            <th>Fecha Nacimiento</th>
+            <th>Correo</th>
+            <th>Rol</th>
         </tr>
         <?php
         include '../../../config/conexionBD.php';
-        $codigo = $_GET["codigo"];
-        $sql = "SELECT usu_cedula,usu_nombres,usu_apellidos,tele_numero,tele_tipo,tele_operadora FROM telefono a, usuario b WHERE a.tele_usu_codigo='$codigo' AND b.usu_codigo='$codigo'";
+        $sql = "SELECT * FROM usuario WHERE usu_eliminado='S'";
         $result = $conn->query($sql);
         
 
@@ -41,14 +40,15 @@
                 echo " <td>" . $row["usu_cedula"] . "</td>";
                 echo " <td>" . $row['usu_nombres'] . "</td>";
                 echo " <td>" . $row['usu_apellidos'] . "</td>";
-                echo " <td>" . $row['tele_numero'] . "</td>";
-                echo " <td>" . $row['tele_tipo'] . "</td>";
-                echo " <td>" . $row['tele_operadora'] . "</td>";                                  
+                echo " <td>" . $row['usu_direccion'] . "</td>";
+                echo " <td>" . $row['usu_fecha_nacimiento'] . "</td>";
+                echo " <td>" . $row['usu_correo'] . "</td>";    
+                echo " <td>" . $row['usu_rol'] . "</td>";                               
                 echo "</tr>";
             }
         } else {
             echo "<tr>";
-            echo " <td colspan='7'> No existen telefonos registradas en el sistema </td>";
+            echo " <td colspan='7'> No existen usuarios registrados </td>";
             echo "</tr>";
         }
         

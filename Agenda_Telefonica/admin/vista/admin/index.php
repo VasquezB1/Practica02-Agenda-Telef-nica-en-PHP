@@ -18,13 +18,13 @@ if (!isset($_SESSION['isLogged']) || $_SESSION['isLogged'] === FALSE) {
 <body>
     <center><h1>GESTION DE USUARIOS---CONTROL ADMINISTRATIVO</h1></center>
     <nav>
-      <a href="../Practica01-Mi-Primer-Sitio-Web/Secundarias/primer_maravilla.html">Listar Usuarios Activos</a>
-      <a href="../Practica01-Mi-Primer-Sitio-Web/Secundarias/segunda_maravilla.html">Listar Usuarios Eliminados</a>
+      <a href="listar_usu_activos.php">Listar Usuarios Activos</a>
+      <a href="listar_usu_eliminados.php">Listar Usuarios Eliminados</a>
       <a href="../../../public/vista/buscar_cedula.html">Buscar Usuario por Cedula</a>
       <a href="../../../public/vista/crear_usuario.html">Crear Usuario</a>
  
    </nav>
-
+   <center><h2>Usuarios Registrados</h2></center>
     <table style="width:100%">
         <tr>
             <th>Cedula</th>
@@ -53,9 +53,8 @@ if (!isset($_SESSION['isLogged']) || $_SESSION['isLogged'] === FALSE) {
                 echo " <td>" . $row['usu_rol'] . "</td>";
                 echo " <td> <a href='eliminar.php?codigo=" . $row['usu_codigo'] . "'>Eliminar</a> </td>";
                 echo " <td> <a href='modificar.php?codigo=" . $row['usu_codigo'] . "'>Modificar</a> </td>";
-                echo " <td> <a href='cambiar_contrasena.php?codigo=" . $row['usu_codigo'] . "'>Cambiar contraseña</a> </td>";  
-                echo " <td> <a href='agregar_telefono.php?codigo=" . $row['usu_codigo'] . "'>Agregar Telefono</a> </td>";       
-                echo " <td> <a href='lista_tele.php?codigo=" . $row['usu_codigo'] . "'>Lista de Telefono</a> </td>";                         
+                echo " <td> <a href='cambiar_contrasena.php?codigo=" . $row['usu_codigo'] . "'>Cambiar contraseña</a> </td>";        
+                echo " <td> <a href='lista_tele.php?codigo=" . $row['usu_codigo'] . "'>Lista de Telefonos</a> </td>";                         
                 echo "</tr>";
             }
         } else {
