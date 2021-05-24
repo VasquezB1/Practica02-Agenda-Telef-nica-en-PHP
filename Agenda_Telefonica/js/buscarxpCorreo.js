@@ -1,6 +1,6 @@
-function buscarxpCedula() {
-    var cedula = document.getElementById("cedula").value;
-    if (cedula == "") {
+function buscarxpCorreo() {
+    var correo = document.getElementById("correo").value;
+    if (correo == "") {
     document.getElementById("informacion").innerHTML = ""; 
     } else { 
     if (window.XMLHttpRequest) {
@@ -16,7 +16,7 @@ function buscarxpCedula() {
     document.getElementById("informacion").innerHTML = this.responseText;
     }
     };
-    xmlhttp.open("GET","../../public/controladores/buscarxCedula.php?cedula="+cedula,true);
+    xmlhttp.open("GET","../../public/controladores/buscarxCorreo.php?correo="+correo,true);
     xmlhttp.send();
     }
     return false;
