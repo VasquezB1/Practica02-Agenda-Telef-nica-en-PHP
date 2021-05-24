@@ -13,9 +13,9 @@
  $nombres = isset($_POST["nombres"]) ? mb_strtoupper(trim($_POST["nombres"]), 'UTF-8') : null;
  $apellidos = isset($_POST["apellidos"]) ? mb_strtoupper(trim($_POST["apellidos"]), 'UTF-8') : null;
  $direccion = isset($_POST["direccion"]) ? mb_strtoupper(trim($_POST["direccion"]), 'UTF-8') : null;
- $telefono = isset($_POST["telefono"]) ? trim($_POST["telefono"]): null;
  $correo = isset($_POST["correo"]) ? trim($_POST["correo"]): null;
- $fechaNacimiento = isset($_POST["fechaNacimiento"]) ? trim($_POST["fechaNacimiento"]): null;
+ $fechaNa= isset($_POST["fecha"]) ? trim($_POST["fecha"]) : null;
+ $rol = isset($_POST["rol"]) ? mb_strtoupper(trim($_POST["rol"]), 'UTF-8') : null;
  date_default_timezone_set("America/Guayaquil");
  $fecha = date('Y-m-d H:i:s', time());
  $sql = "UPDATE usuario " .
@@ -23,9 +23,9 @@
  "usu_nombres = '$nombres', " .
  "usu_apellidos = '$apellidos', " .
  "usu_direccion = '$direccion', " .
- "usu_telefono = '$telefono', " .
  "usu_correo = '$correo', " .
- "usu_fecha_nacimiento = '$fechaNacimiento', " .
+ "usu_fecha_nacimiento = '$fechaNa', " .
+ "usu_rol = '$rol', " .
  "usu_fecha_modificacion = '$fecha' " .
  "WHERE usu_codigo = $codigo";
  if ($conn->query($sql) === TRUE) {
@@ -33,7 +33,7 @@
  } else {
  echo "Error: " . $sql . "<br>" . mysqli_error($conn) . "<br>";
  }
- echo "<a href='../../vista/usuario/index.php'>Regresar</a>";
+ echo "<a href='../../vista/admin/index.php'>Regresar</a>";
  $conn->close();
 ?>
 </body>

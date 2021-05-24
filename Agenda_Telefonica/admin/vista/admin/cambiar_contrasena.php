@@ -3,7 +3,7 @@
 <head>
  <meta charset="UTF-8">
  <title>Modificar datos de persona</title>
- <script  lenguage ="javascript" type="text/javascript" src="../../../public/vista/validaciones_usuarios.js "></script>
+ <script  lenguage ="javascript" type="text/javascript" src="../../../js/validaciones_usuarios.js "></script>
  <style type="text/css">
  .error {
  color: red;

@@ -16,17 +16,14 @@ if (!isset($_SESSION['isLogged']) || $_SESSION['isLogged'] === FALSE) {
 </head>
 
 <body>
-    <h2>Buscar Información</h2>
-
-    <header>
-        <form onsubmit="return buscarPorCedula()">
-            <input type="text" id="cedula" name="buscar" value="">
-            <input type="button" id="buscar" name="buscar" value="Buscar cedula" onclick="buscarPorCedula()">
-        </form>
-        <br>
-        <div id="informacion"><b>Datos de la persona</b></div><br>
-
-    </header>
+    <center><h1>GESTION DE USUARIOS---CONTROL ADMINISTRATIVO</h1></center>
+    <nav>
+      <a href="../Practica01-Mi-Primer-Sitio-Web/Secundarias/primer_maravilla.html">Listar Usuarios Activos</a>
+      <a href="../Practica01-Mi-Primer-Sitio-Web/Secundarias/segunda_maravilla.html">Listar Usuarios Eliminados</a>
+      <a href="../../../public/vista/buscar_cedula.html">Buscar Usuario por Cedula</a>
+      <a href="../../../public/vista/crear_usuario.html">Crear Usuario</a>
+ 
+   </nav>
 
     <table style="width:100%">
         <tr>
@@ -77,9 +74,7 @@ if (!isset($_SESSION['isLogged']) || $_SESSION['isLogged'] === FALSE) {
     <br>
     <a class="cerrar" href="../../../config/cerrar_sesion.php">Cerrar Sesion</a>
     <br>
-    <br>
-    <a class="Formulario" href="../../../public/vista/crear_usuario.html">Crear Usuarios</a>
-    <br>
+    
 </footer>
 
 </html>

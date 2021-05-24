@@ -3,7 +3,7 @@
 <head>
  <meta charset="UTF-8">
  <title>Modificar datos de persona</title>
- <script  lenguage ="javascript" type="text/javascript" src="../../../public/vista/validaciones_usuarios.js "></script>
+ <script  lenguage ="javascript" type="text/javascript" src="../../../js/validaciones_usuarios.js "></script>
  <style type="text/css">
  .error {
  color: red;
@@ -40,37 +40,42 @@
 required placeholder="Ingrese la cedula ..." oninput="return validarCedula(this)"/>
     <span id="mensajeCedula" class="error"></span>
 
- <br>
+ <br><br>
  <label for="nombres">Nombres (*)</label>
  <input type="text" id="nombres" name="nombres" value="<?php echo $row["usu_nombres"];
 ?>" required placeholder="Ingrese los dos nombres ..."onkeyup="return validarLetrasN(this)" onblur="validarDosNombres()"/>
 <span id="mensajeNombres" class="error"></span>
-<br>
+<br><br>
  <label for="apellidos">Apelidos (*)</label>
  <input type="text" id="apellidos" name="apellidos" value="<?php echo $row["usu_apellidos"];
 ?>" required placeholder="Ingrese los dos apellidos ..."onkeyup="return validarLetrasA(this)" onblur="validarDosApellidos()" />
 <span id="mensajeApellidos" class="error"></span>
- <br>
+ <br><br>
  <label for="direccion">Dirección (*)</label>
  <input type="text" id="direccion" name="direccion" value="<?php echo $row["usu_direccion"];
 ?>" required placeholder="Ingrese la dirección ..."/>
 <span id="mensajeDireccion" class="error"></span>
- <br>
- <label for="telefono">Teléfono (*)</label>
- <input type="text" id="telefono" name="telefono" value="<?php echo $row["usu_telefono"];
-?>" required placeholder="Ingrese el teléfono ..."oninput="return validarTelefono(this)" />
-<span id="mensajeTelefono" class="error"></span>
- <br>
- <label for="fecha">Fecha Nacimiento (*)</label>
- <input type="date" id="fechaNacimiento" name="fechaNacimiento" value="<?php echo
-$row["usu_fecha_nacimiento"]; ?>" required placeholder="Ingrese la fecha de nacimiento ..."/>
-<span id="mensajeFecha" class="error"></span>
- <br>
- <label for="correo">Correo electrónico (*)</label>
- <input type="email" id="correo" name="correo" value="<?php echo $row["usu_correo"]; ?>"
-required placeholder="Ingrese el correo electrónico ..."onkeyup="return validarCorreo(this)" />
-<span id="mensajeCorreo" class="error"></span>
- <br>
+ <br><br>
+ <label for="correo">Correo Electrónico (*)</label>
+        <input class="largos" type="email" id="correo" name="correo" value="<?php echo $row["usu_correo"]; ?>"
+required placeholder="Ingrese el correo electrónico ..." onkeyup="validarCorreo(this)" />
+        <span id="mensajeCorreo" class="error"></span>
+        <br><br>
+
+        <label for="fecha">Fecha Nacimiento (*)</label>
+        <input class="largos" type="text" id="fecha" name="fecha" value="<?php echo $row["usu_fecha_nacimiento"]; ?>"
+          required placeholder="Ingrese su fecha de nacimiento (yyyy-mm-dd)" onkeyup="return validarFecha(this)" />
+        <span id="mensajeFechaNac" class="error"></span>
+        <br><br>
+
+        <label for="rol">Rol Usuario (*)</label>
+
+        <select class="largos" id="rol" name="rol">
+            <option>Admin</option>
+            <option>User</option>
+        </select>
+        <span id="mensajerol" class="error"></span>
+        <br><br>
 
  <input type="submit" id="modificar" name="modificar" value="Modificar" />
  <input type="reset" id="cancelar" name="cancelar" value="Cancelar" />

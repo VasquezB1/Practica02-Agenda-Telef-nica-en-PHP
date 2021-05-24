@@ -41,16 +41,16 @@ disabled/>
  <input type="text" id="direccion" name="direccion" value="<?php echo $row["usu_direccion"];
 ?>" disabled/>
  <br>
- <label for="telefono">Teléfono (*)</label>
- <input type="text" id="telefono" name="telefono" value="<?php echo $row["usu_telefono"];
-?>" disabled/>
- <br>
  <label for="fecha">Fecha Nacimiento (*)</label>
  <input type="date" id="fechaNacimiento" name="fechaNacimiento" value="<?php echo
 $row["usu_fecha_nacimiento"]; ?>" disabled/>
  <br>
  <label for="correo">Correo electrónico (*)</label>
  <input type="email" id="correo" name="correo" value="<?php echo $row["usu_correo"]; ?>"
+disabled/>
+ <br>
+ <label for="rol">Rol (*)</label>
+ <input type="text" id="rol" name="rol" value="<?php echo $row["usu_rol"]; ?>"
 disabled/>
  <br>
 
