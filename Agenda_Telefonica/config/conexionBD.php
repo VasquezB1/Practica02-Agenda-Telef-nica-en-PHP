@@ -1,6 +1,6 @@
 <?php
 
-$db_servername = "localhost";
+$db_servername = "localhost:3307";
 $db_username = "root";
 $db_password = "";
 $db_name = "agenda";

@@ -10,7 +10,7 @@ if (!isset($_SESSION['isLogged']) || $_SESSION['isLogged'] === FALSE) {
 
 <head>
     <meta charset="UTF-8">
-    <title>Gestión de usuario-USUARIO</title>
+    <title>Gestión de usuarios-ADMINISTRADOR</title>
     <script src="../../../js/buscarCedula.js" type="text/javascript"></script>
 
 </head>

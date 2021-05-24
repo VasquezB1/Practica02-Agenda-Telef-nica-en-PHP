@@ -14,7 +14,7 @@
 
     <table style="width:100%">
         <tr>
-            <th>Cedula</th>
+        <th>Cedula</th>
             <th>Nombres</th>
             <th>Apellidos</th>
             <th>Telefono</th>
@@ -29,8 +29,8 @@
         
 
         if ($result->num_rows > 0) {
-
-            while ($row = $result->fetch_assoc()) {
+  
+            while ($row = $result->fetch_assoc()) {               
                 echo "<tr>";
                 echo " <td>" . $row["usu_cedula"] . "</td>";
                 echo " <td>" . $row['usu_nombres'] . "</td>";
@@ -59,7 +59,7 @@
     <a class="cerrar" href="../../../config/cerrar_sesion.php">Cerrar Sesion</a>
     <br>
     <br>
-    <a class="Formulario" href="../../../admin/vista/usuario/index.php">Volver</a>
+    <a class="Formulario" href="../../../admin/vista/admin/index.php">Volver</a>
     <br>
 </footer>
 
