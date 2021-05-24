@@ -9,6 +9,7 @@
  //incluir conexión a la base de datos
  include '../../../config/conexionBD.php';
  $codigo = $_POST["codigo"];
+ $codPer= $_POST["codPer"];
  $contrasena1 = isset($_POST["contrasena1"]) ? trim($_POST["contrasena1"]) : null;
  $contrasena2 = isset($_POST["contrasena"]) ? trim($_POST["contrasena"]) : null;
  $sqlContrasena1 = "SELECT * FROM usuario where usu_codigo=$codigo and
@@ -31,7 +32,8 @@ usu_password=MD5('$contrasena1')";
     }else{
     echo "<p>La contraseña actual no coincide con nuestros registros!!! </p>";
     }
-    echo "<a href='../../vista/usuario/index.php'>Regresar</a>";
+    echo "<a href='../../vista/admin/index.php?codigo=".$codPer."'>Regresar</a>";
+   
     $conn->close();
    ?>
    </body>

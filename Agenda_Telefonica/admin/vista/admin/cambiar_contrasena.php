@@ -24,10 +24,12 @@
 ?>   
  <?php
  $codigo = $_GET["codigo"];
+ $codPer = $_GET["codPer"];
  ?>
  <form id="formulario01" method="POST" action="../../controladores/admin/cambiar_contrasena.php">
 
  <input type="hidden" id="codigo" name="codigo" value="<?php echo $codigo ?>" />
+ <input type="hidden" id="codPer" name="codPer" value="<?php echo $codPer ?>" />
  <label for="cedula">Contraseña Actual (*)</label>
  <input type="password" id="contrasena1" name="contrasena1" value="" required
 placeholder="Ingrese su contraseña actual ..."/>

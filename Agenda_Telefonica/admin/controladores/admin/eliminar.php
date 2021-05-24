@@ -9,6 +9,7 @@
  //incluir conexión a la base de datos
  include '../../../config/conexionBD.php';
  $codigo = $_POST["codigo"];
+ $codPer= $_POST["codPer"];
 
  //Si voy a eliminar físicamente el registro de la tabla
  //$sql = "DELETE FROM usuario WHERE codigo = '$codigo'";
@@ -21,7 +22,7 @@ usu_codigo = $codigo";
  } else {
  echo "<p>Error: " . $sql . "<br>" . mysqli_error($conn) . "</p>";
  }
- echo "<a href='../../vista/admin/index.php'>Regresar</a>";
+ echo "<a href='../../vista/admin/index.php?codigo=".$codPer."'>Regresar</a>";
  $conn->close();
 
  ?>

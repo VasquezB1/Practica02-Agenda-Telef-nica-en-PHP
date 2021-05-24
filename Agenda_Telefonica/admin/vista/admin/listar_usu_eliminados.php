@@ -29,6 +29,7 @@
         </tr>
         <?php
         include '../../../config/conexionBD.php';
+        $codigo=$_GET["codigo"];
         $sql = "SELECT * FROM usuario WHERE usu_eliminado='S'";
         $result = $conn->query($sql);
         
@@ -65,7 +66,7 @@
     <a class="cerrar" href="../../../config/cerrar_sesion.php">Cerrar Sesion</a>
     <br>
     <br>
-    <a class="Formulario" href="../../../admin/vista/admin/index.php">Volver</a>
+    <a class="Formulario" href="../../../admin/vista/admin/index.php?codigo=<?php echo $codigo?>">Volver</a>
     <br>
 </footer>
 
