@@ -4,9 +4,26 @@
 <head>
     <meta charset="UTF-8">
     <title>Agregar Telefonos</title>
+    <script  lenguage ="javascript" type="text/javascript" src="../../../js/validaciones_usuarios.js "></script>
+ <style type="text/css">
+ .error {
+ color: red;
+ font-size: 12px;
+ }
+ .bien{
+ color: black;
+ font-size: 12px;
+ }
+</style>
 </head>
 
 <body>
+<?php
+ session_start();
+ if(!isset($_SESSION['isLogged']) || $_SESSION['isLogged'] === FALSE){
+    header("Location: /Agenda_Telefonica/public/vista/login.html");
+ }
+?>
     <?php
     $codigo = $_GET["codigo"];
     ?>
@@ -16,7 +33,7 @@
         <label for="telefono">Telefono (*)</label>
         <input type="text" id="telefono" name="telefono" value="" placeholder="Ingrese su telefono"
             onkeyup="return validarTelefono(this)" />
-        <span id="mensajeTele" class="error"></span>
+        <span id="mensajeTelefono" class="error"></span>
         <br><br>
 
         <label for="tipo">Tipo Telefono (*)</label>
