@@ -71,7 +71,7 @@ if (!isset($_SESSION['isLogged']) || $_SESSION['isLogged'] === FALSE) {
                 echo " <td>" . $row['usu_nombres'] . "</td>";
                 echo " <td>" . $row['usu_apellidos'] . "</td>";
                 echo " <td>" . $row['usu_direccion'] . "</td>";               
-                echo " <td>" . $row['usu_correo'] . "</td>";
+                echo " <td> <a href=mailto:".$row['usu_correo'].">".$row['usu_correo']."</a></td>";
                 echo " <td>" . $row['usu_fecha_nacimiento'] . "</td>";
                 echo " <td>" . $row['usu_rol'] . "</td>";
                 echo " <td> <a href='eliminar.php?codigo=" . $row['usu_codigo']."&codPer=".$codigo ."'>Eliminar</a> </td>";

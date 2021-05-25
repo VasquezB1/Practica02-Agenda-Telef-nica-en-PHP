@@ -4,7 +4,7 @@
  $usuario = isset($_POST["correo"]) ? trim($_POST["correo"]) : null;
  $contrasena = isset($_POST["contrasena"]) ? trim($_POST["contrasena"]) : null;
  $sql = "SELECT * FROM usuario WHERE usu_correo = '$usuario' and usu_password =
-MD5('$contrasena') and usu_rol ='U'";
+MD5('$contrasena') and usu_rol ='User'";
 
  $result = $conn->query($sql); 
  if ($result->num_rows > 0) { 
@@ -13,7 +13,7 @@ MD5('$contrasena') and usu_rol ='U'";
  header("Location: ../../admin/vista/usuario/index.php?codigo=". $per['usu_codigo']);
  }else{  
     $sql = "SELECT * FROM usuario WHERE usu_correo = '$usuario' and usu_password =
-    MD5('$contrasena') and usu_rol ='A'";
+    MD5('$contrasena') and usu_rol ='Admin'";
     
      $result = $conn->query($sql); 
      if ($result->num_rows > 0) { 

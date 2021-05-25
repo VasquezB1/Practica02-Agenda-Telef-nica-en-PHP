@@ -35,7 +35,7 @@
                 echo " <td>" . $row["usu_cedula"] . "</td>";
                 echo " <td>" . $row['usu_nombres'] . "</td>";
                 echo " <td>" . $row['usu_apellidos'] . "</td>";
-                echo " <td>" . $row['tele_numero'] . "</td>";
+                echo " <td> <a href=tel:+593".$row['tele_numero'].">".$row['tele_numero']."</a></td>";             
                 echo " <td>" . $row['tele_tipo'] . "</td>";
                 echo " <td>" . $row['tele_operadora'] . "</td>";                                  
                 echo "</tr>";

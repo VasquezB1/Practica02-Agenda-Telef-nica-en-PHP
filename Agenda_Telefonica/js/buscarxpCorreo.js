@@ -16,7 +16,7 @@ function buscarxpCorreo() {
     document.getElementById("informacion").innerHTML = this.responseText;
     }
     };
-    xmlhttp.open("GET","../../public/controladores/buscarxCorreo.php?correo="+correo,true);
+    xmlhttp.open("GET","../../public/controladores/buscaxCorreo.php?correo="+correo,true);
     xmlhttp.send();
     }
     return false;

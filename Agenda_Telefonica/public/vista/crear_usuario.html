@@ -7,14 +7,15 @@
     <title>Formulario</title>
     <script type="text/javascript" src="../../js/validaciones_usuarios.js"></script>
     <style type="text/css">
-    .error {
-    color: red;
-    font-size: 12px;
-    }
-    .bien{
-    color: black;
-    font-size: 12px;
-    }
+        .error {
+            color: red;
+            font-size: 12px;
+        }
+
+        .bien {
+            color: black;
+            font-size: 12px;
+        }
 
         @font-face {
             font-family: Fondamento;
@@ -41,16 +42,15 @@
         <br><br>
 
         <label for="nombres">Nombres (*)</label>
-        <input type="text" id="nombres" name="nombres" value="" placeholder="Ingrese sus dos nombres"
-            onkeyup="return validarNombres(this)" />
+        <input type="text" id="nombres" name="nombres" value="" placeholder="Ingrese sus dos nombres ...
+       " onkeyup="return validarLetrasN(this)" onblur="validarDosNombres()" />
         <span id="mensajeNombres" class="error"></span>
-        <br><br>
-
-        <label for="apellidos">Apellidos (*)</label>
-        <input type="text" id="apellidos" name="apellidos" value="" placeholder="Ingrese sus dos apellidos"
-            onkeyup="return validarApellidos(this)" />
+        <br>
+        <label for="apellidos">Apelidos (*)</label>
+        <input type="text" id="apellidos" name="apellidos" value="" placeholder="Ingrese sus dos apellidos ...
+        " onkeyup="return validarLetrasA(this)" onblur="validarDosApellidos()" />
         <span id="mensajeApellidos" class="error"></span>
-        <br><br>
+        <br>
 
         <label for="direccion">Direccion (*)</label>
         <input type="text" id="direccion" name="direccion" value="" placeholder="Ingrese su dirección" />
@@ -65,7 +65,7 @@
 
         <label for="contrasena">Contraseña (*)</label>
         <input type="password" id="contrasena" name="contrasena" value="" placeholder="Ingrese su contraseña"
-        onkeyup="return validarPassword(this)" onblur="validarCaracteres()" />
+            onkeyup="return validarPassword(this)" onblur="validarCaracteres()" />
         <span id="mensajeContra" class="error"></span>
         <br><br>
 
