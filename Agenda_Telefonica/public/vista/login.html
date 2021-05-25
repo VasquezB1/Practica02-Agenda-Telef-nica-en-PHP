@@ -2,46 +2,63 @@
 <html>
 
 <head>
-    <meta charset="UTF-8">
-    <title>Iniciar sesión</title>
-    <style type="text/css">
-        .error {
-                color: red;
+        <header class="enc1">
+                <img class="logo" src="../../images/LOGO UPS -01.png" alt="Logo UPS" />
+                <div class="buscar" id="searchform">
 
-        }
+                </div>
+                <img class="icono" src="../../images/usuario.png" alt="Usuario" />
+                <img class="icono" src="../../images/charla.png" alt="Mensajes" />
+                <img class="icono" src="../../images/mas.png" alt="Mas" />
 
-        @font-face {
-                font-family: Fondamento;
-                src: url(../letras/Architects_Daughter/ArchitectsDaughter-Regular.ttf);
-        }
+                <br><br><br><br>
+        </header>
+        <header class="tabla">
+                <meta charset="UTF-8">
 
-        * {
-                font-family: 'Fondamento';
-                color: white;
-        }
-</style>
-<link href="../../css/estilos.css" rel="stylesheet" />
+                <title>Iniciar sesión</title>
+                <style type="text/css">
+                        .error {
+                                color: red;
+
+                        }
+
+                        @font-face {
+                                font-family: Fondamento;
+                                src: url(../letras/Architects_Daughter/ArchitectsDaughter-Regular.ttf);
+                        }
+
+                        * {
+                                font-family: 'Fondamento';
+                                color: white;
+                        }
+                </style>
+                <link href="../../css/estilos.css" rel="stylesheet" />
+                <link href="../../css/general.css" rel="stylesheet" />
 </head>
 
 <body>
-    <h1><center> Inicio Sesion</center></h1>
-    <form class="formu" id="formulario01" method="POST" action="../controladores/login.php">
-        <br>
-        <br>
-        <label for="correo">Correo electrónico </label>
-        <input type="email" id="correo" name="correo" value="" placeholder="Ingrese el correo ..." />
-        <br>
-        <br>
-        <label for="nombres">Contraseña (*)</label>
-        <input type="password" id="contrasena" name="contrasena" value="" placeholder="Ingrese su 
+        <h1>
+            <br>    Inicio Sesión
+        </h1>
+        <form class="formu" id="formulario01" method="POST" action="../controladores/login.php">
+                <br>
+                <br>
+                <label for="correo">Correo electrónico </label>
+                <input type="email" id="correo" name="correo" value="" placeholder="Ingrese el correo ..." />
+                <br>
+                <br>
+                <label for="nombres">Contraseña (*)</label>
+                <input type="password" id="contrasena" name="contrasena" value="" placeholder="Ingrese su 
 contraseña ..." />
-        <br>
-        <br>
-        <input class="boton" type="submit" id="login" name="login" value="Iniciar Sesión" />
-        <input type ='button' class="boton" value = 'Crear Usuarios' onclick="window.open('crear_usuario.html');"/>
+                <br>
+                <br>
+                <input class="boton" type="submit" id="login" name="login" value="Iniciar Sesión" />
+                <input type='button' class="boton" value='Crear Usuarios'
+                        onclick="window.open('crear_usuario.html');" />
 
-        <a  class="login" href="anonimo.html"><center>LOGIN USUARIOS INVITADOS </center></a>
-    </form>
+                <a id="anonimo" href="anonimo.html"><center>LOGIN USUARIOS INVITADOS </center></a>
+        </form>
 
 </body>
 

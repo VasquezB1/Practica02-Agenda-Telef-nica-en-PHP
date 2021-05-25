@@ -1,30 +1,34 @@
 .formu {
     border: 1px solid chartreuse;
-    margin: 20px 200px;
+    margin-top: 2%;
+    margin-left: 30%;
+    margin-right: 30%;
     float: center;
     position: relative;
     margin-left: 30%;
+    text-align: center;
 }
 
 .largos {
-    position: relative;
-    margin-left: 20%;
-    width: 270px;
+
+    width: 80%;
+    height: 40px;
 }
 
 label {
-
-    position: relative;
+    text-align: center;
     margin-left: 15%;
+    font-size: 200%;
 }
 
 input {
-    width: 200px;
+    width: 80%;
+    font-size: 200%;
     color: black;
 }
 
 body {
-    background-color:black;
+    background-color: black;
 }
 
 h1 {
@@ -32,10 +36,70 @@ h1 {
     margin: 20px 380px;
 }
 
-
-
 .boton {
     position: relative;
     margin-left: 15%;
     width: 100px;
+    display: flex;
+    float: left;
+    width: 25%;
+    flex-direction: row;
+    box-shadow:
+        1px 1px 0 #1d913a,
+        2px 2px 0 #1d913a,
+        3px 3px 0 #1d913a,
+        4px 4px 0 #1d913a,
+        5px 5px 0 #1d913a;
+    font-size: 1.5em;
+}
+
+
+#anonimo {
+    margin-top: 4%;
+    text-align: center;
+    position: fixed;
+    margin-left: 10%;
+
+    display: flex;
+    float: left;
+    width: 12%;
+    flex-direction: row;
+    box-shadow:
+        1px 1px 0 #1d913a,
+        2px 2px 0 #1d913a,
+        3px 3px 0 #1d913a,
+        4px 4px 0 #1d913a,
+        5px 5px 0 #1d913a;
+    font-size: 1.2em;
+}
+
+.select {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 2em;
+    color: black;
+}
+
+.select option {
+    color: black;
+}
+
+.select option:hover {
+    box-shadow: 0px 0px 15px 15px #1d913a;
+}
+
+#a1 {
+    text-align: center;
+    
+    margin-left: 47%;
+    display: flex;
+    float: left;
+    width: 6%;
+    flex-direction: row;
+    box-shadow:
+        1px 1px 0 #1d913a,
+        2px 2px 0 #1d913a,
+        3px 3px 0 #1d913a,
+        4px 4px 0 #1d913a,
+        5px 5px 0 #1d913a;
+    font-size: 2em;
 }

@@ -9,12 +9,12 @@
     <style type="text/css">
         .error {
             color: red;
-            font-size: 12px;
+            font-size: 1.5em;
         }
 
         .bien {
             color: black;
-            font-size: 12px;
+            font-size: 2em;
         }
 
         @font-face {
@@ -28,10 +28,12 @@
         }
     </style>
     <link href="../../css/estilos.css" rel="stylesheet" />
+    
+
 </head>
 
 <body>
-    <h1>Formulario Programacion Hipermedial</h1>
+    <h1><center> Formulario Programacion Hipermedial</center></h1>
     <form class="formu" id="formulario01" method="POST" action="../controladores/crear_usuario.php"
         onsubmit="return validarCamposObligatorios()">
         <br>
@@ -77,7 +79,8 @@
 
         <label for="rol">Rol Usuario (*)</label>
 
-        <select class="largos" id="rol" name="rol">
+        <select class="select" id="rol" name="rol">
+            <option> </option>
             <option>Admin</option>
             <option>User</option>
         </select>
@@ -89,7 +92,8 @@
         <input class="boton" type="reset" id="cancelar" name="cancelar" value="Cancelar" />
         <br><br>
     </form>
-    <a class="login" href="login.html">
+    <br>
+    <a  id="a1" href="login.html">
         <center>LOGIN </center>
     </a>
 </body>
