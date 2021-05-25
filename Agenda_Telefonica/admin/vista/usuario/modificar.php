@@ -20,6 +20,14 @@
 </head>
 
 <body>
+    <header class="enc1">
+        <img class="logo" src="../../../images/LOGO UPS -01.png" alt="Logo UPS" />
+        <img class="icono" src="../../../images/usuario.png" alt="Usuario" />
+        <img class="icono" src="../../../images/charla.png" alt="Mensajes" />
+        <img class="icono" src="../../../images/mas.png" alt="Mas" />
+
+        <br><br><br><br>
+    </header>
     <h1>Modificar Datos Usuario</h1>
     <?php
     session_start();
@@ -57,7 +65,7 @@
                 <br><br>
 
                 <label for="operadora">Operadora Telefono (*)</label>
-                <select class="select" id="operadora" name="operadora">                
+                <select class="select" id="operadora" name="operadora">
                     <option>Movistar</option>
                     <option>Claro</option>
                     <option>CNT</option>
@@ -78,6 +86,18 @@
     }
     $conn->close();
     ?>
+
+    <footer>
+        Byron Simon Vasquez Saldaña&#8226; Universidad Politecnica Salesiana, <a href="https://mail.google.com/mail/u/0/#inbox">bvasquezs@est.ups.edu.ec</a> &#8226;
+        <a href=”0987815997”> 0987815997 </a><br>
+        Jose Guillermo Quinde Delgado&#8226; Universidad Politecnica Salesiana, <a href="https://mail.google.com/mail/u/0/#inbox">jquinded@est.ups.edu.ec</a> &#8226;
+        <a href=”0991352595”> 0991352595 </a>
+        <br>© Todos los derechos reservados<br>
+
+        <a class="cerrar" href="../../../config/cerrar_sesion.php">Cerrar Sesion</a>
+        <br>
+
+    </footer>
 </body>
 
 </html>

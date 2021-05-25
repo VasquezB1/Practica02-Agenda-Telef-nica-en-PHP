@@ -105,4 +105,14 @@ h1 {
         5px 5px 0 #1d913a;
     font-size: 2em;
 }
+footer {
+    color: white;
+    width: 100%;
+    clear: left;
+    text-align: center;
+    font-size: 1.5em;
+    margin-top: 200px;
+    border-top: 4px solid rgb(33, 124, 71);
+
+}
 
