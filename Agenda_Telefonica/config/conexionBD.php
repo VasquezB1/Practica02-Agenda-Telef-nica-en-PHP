@@ -1,8 +1,8 @@
 <?php
 
-$db_servername = "localhost";
+$db_servername = "localhost";//Se pone la direccion de localhost para conexion de base
 $db_username = "root";
-$db_password = "";
+$db_password = "";//Se pone la contraseña dependiendo si tiene o no
 $db_name = "agenda";
 
 $conn = new mysqli($db_servername, $db_username, $db_password, $db_name);
