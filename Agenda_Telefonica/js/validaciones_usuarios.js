@@ -1,7 +1,6 @@
 //funcion validar campos llenos obligatorios
 function validarCamposObligatorios() {
   var bandera = true
-
   for (var i = 0; i < document.forms[0].elements.length; i++) {
     var elemento = document.forms[0].elements[i]
     if (elemento.value == '' && elemento.type == 'text') {
