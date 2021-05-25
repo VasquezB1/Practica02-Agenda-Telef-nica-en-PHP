@@ -1,6 +1,13 @@
-*{
+@font-face {
+    font-family: KoHo;
+    src: url(../letras/KoHo/KoHo-Bold.ttf);
+}
+
+* {
+    font-family: 'Koho';
     color: white;
 }
+
 .icono {
 
     margin-top: 4%;
@@ -31,12 +38,13 @@ h1 {
     font-size: 60px;
     Color: #39FF14;
     text-align: center;
-  
+    font-family: 'Koho';
+
 }
 
 .logo {
     width: 800px;
-    height: 230px;
+    height: 200px;
     float: left;
     margin-right: 15%;
 
@@ -47,13 +55,14 @@ body {
     margin-left: 5%;
     margin-right: 5%;
     background-color: black;
-    
+
 
 }
+
 .tabla {
     margin-left: 180px;
     margin-right: 180px;
-    background-color:rgb(41, 42, 46);
+    background-color: rgb(41, 42, 46);
     text-align: center;
 
 }
@@ -77,19 +86,19 @@ body {
     text-decoration: none;
     text-align: center;
     font-size: 20px;
-    
+
 }
 
 .tabla ul li a:hover {
     background-color: cornflowerblue;
 }
 
-h3{
+h3 {
     text-align: left;
     color: #39FF14;
 }
 
-p{
+p {
     text-align: left;
 }
 
@@ -102,10 +111,10 @@ footer {
     margin-top: 200px;
     border-top: 4px solid rgb(33, 124, 71);
 
-} 
+}
 
-.cerrar{
-   
+.cerrar {
+
     box-shadow:
         1px 1px 0 #1d913a,
         2px 2px 0 #1d913a,
@@ -114,4 +123,106 @@ footer {
         5px 5px 0 #1d913a;
     font-size: 1.2em;
     color: #39FF14;
+}
+
+tr {
+    border-collapse: separate;
+    border-spacing: 5px;
+    color: #fff;
+    text-align: center;
+}
+
+tr,
+td {
+    background: rgba(255, 255, 255, 0.3);
+    color: black;
+}
+
+h2 {
+    text-align: left;
+    color: #39FF14;
+    text-align: center;
+}
+
+.volver{
+    font-size: 25px;
+}
+
+.buscar {
+    display: flex;
+
+  color: black ;
+    width: 40%;
+    flex-direction: row;
+    box-shadow:
+        1px 1px 0 #1d913a,
+        2px 2px 0 #1d913a,
+        3px 3px 0 #1d913a,
+        4px 4px 0 #1d913a,
+        5px 5px 0 #1d913a,
+        6px 6px 0 #1d913a;
+}
+
+.buscar>input[type=text],
+.buscar>button  {
+    color: black;
+    display: block;
+    font: 1.2em 'Montserrat Alternates';
+    
+ 
+}
+
+.buscar>input[type=text] {
+    flex: 1;
+    padding: 0.6em;
+    border: 0.2em solid rgb(26, 188, 156);
+    color: black;
+}
+
+.buscar>button {
+    padding: 0.6em 0.8em;
+    background-color: rgb(26, 188, 156);
+    color: black ;
+    border: none;
+}
+
+.boton{
+   color: black;
+   text-align: center;
+   font-size: 20px;
+}
+
+
+.tabla1 {
+    margin-left: 50px;
+    margin-right: 50px;
+    background-color: rgb(41, 42, 46);
+    text-align: center;
+
+}
+
+.tabla1 ul {
+    list-style: none;
+    margin: 2%;
+    padding: 0;
+
+}
+
+.tabla1 ul li {
+    display: inline-block;
+    padding: 5px;
+}
+
+.tabla1 ul li a {
+    color: white;
+    display: block;
+    padding: 10px 35px;
+    text-decoration: none;
+    text-align: center;
+    font-size: 20px;
+
+}
+
+.tabla1 ul li a:hover {
+    background-color: cornflowerblue;
 }
