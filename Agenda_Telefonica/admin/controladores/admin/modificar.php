@@ -7,6 +7,7 @@
 <body>
 <?php
  //incluir conexión a la base de datos
+ //Modificar Datos
  include '../../../config/conexionBD.php';
  $codigo = $_POST["codigo"];
  $codPer= $_POST["codPer"];
