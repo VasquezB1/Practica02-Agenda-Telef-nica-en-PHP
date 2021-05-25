@@ -1,8 +1,25 @@
-<script type="text/javascript" src="../../js/buscarxCedula.js"></script>
-<center><h1>Buscar Telefono Usuario por Cedula</h1></center>
-<form onsubmit="return buscarxpCedula()">
-    <input type="text" id="cedula" name="cedula" value="">
-    <input type="button" id="buscar" name="buscar" value="Buscar" onclick="buscarxpCedula()">
-   </form>
-   <div id="informacion"><b>Datos de la persona</b></div>
-   
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Buscar Teléfonos Cédula</title>
+    <link href="../../css/indexadmin.css" rel="stylesheet" />
+    <script type="text/javascript" src="../../js/buscarxCedula.js"></script>
+</head>
+
+<body>
+
+    <center>
+        <h1>Buscar Telefono Usuario por Cedula</h1>
+    </center>
+    <form class="buscar" onsubmit="return buscarxpCedula()">
+        <input type="text" id="cedula" name="cedula" value="">
+        <input class="boton" type="button" id="buscar" name="buscar" value="Buscar" onclick="buscarxpCedula()">
+    </form>
+    <div id="informacion"><b>Datos de la persona</b></div>
+
+
+</body>
+
+</html>

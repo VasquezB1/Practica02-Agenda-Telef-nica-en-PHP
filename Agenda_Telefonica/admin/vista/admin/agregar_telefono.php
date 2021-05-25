@@ -2,37 +2,39 @@
 <html>
 
 <head>
+    <link href="../../../css/estilos1.css" rel="stylesheet" />
     <meta charset="UTF-8">
     <title>Agregar Telefonos</title>
-    <script  lenguage ="javascript" type="text/javascript" src="../../../js/validaciones_usuarios.js "></script>
- <style type="text/css">
- .error {
- color: red;
- font-size: 12px;
- }
- .bien{
- color: black;
- font-size: 12px;
- }
-</style>
+    <script lenguage="javascript" type="text/javascript" src="../../../js/validaciones_usuarios.js "></script>
+    <style type="text/css">
+        .error {
+            color: red;
+            font-size: 1.5em;
+        }
+
+        .bien {
+            color: black;
+            font-size: 2em;
+        }
+    </style>
+
 </head>
 
 <body>
-<?php
- session_start();
- if(!isset($_SESSION['isLogged']) || $_SESSION['isLogged'] === FALSE){
-    header("Location: /Agenda_Telefonica/public/vista/login.html");
- }
-?>
+    <?php
+    session_start();
+    if (!isset($_SESSION['isLogged']) || $_SESSION['isLogged'] === FALSE) {
+        header("Location: /Agenda_Telefonica/public/vista/login.html");
+    }
+    ?>
     <?php
     $codigo = $_GET["codigo"];
     ?>
-    <form id="formulario01" method="POST" action="../../controladores/admin/agregar_telefono.php">
+    <form class="formu" id="formulario01" method="POST" action="../../controladores/admin/agregar_telefono.php">
 
         <input type="hidden" id="codigo" name="codigo" value="<?php echo $codigo ?>" />
         <label for="telefono">Telefono (*)</label>
-        <input type="text" id="telefono" name="telefono" value="" placeholder="Ingrese su telefono"
-        oninput="return validarTelefono(this)" />
+        <input type="text" id="telefono" name="telefono" value="" placeholder="Ingrese su telefono" oninput="return validarTelefono(this)" />
         <span id="mensajeTelefono" class="error"></span>
         <br><br>
 

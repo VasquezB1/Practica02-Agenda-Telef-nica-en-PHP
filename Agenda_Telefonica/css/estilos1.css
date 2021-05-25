@@ -1,3 +1,6 @@
+*{
+    color: white;
+}
 .formu {
     border: 1px solid chartreuse;
     margin-top: 2%;
@@ -6,9 +9,7 @@
     float: center;
     position: relative;
     margin-left: 30%;
-    text-align: center;
 }
-
 .largos {
 
     width: 80%;
@@ -16,7 +17,7 @@
 }
 
 label {
-    text-align: center;
+    text-align: left;
     margin-left: 15%;
     font-size: 200%;
 }
@@ -25,6 +26,8 @@ input {
     width: 80%;
     font-size: 200%;
     color: black;
+    text-align: center;
+    margin-left: 100px;
 }
 
 body {
@@ -90,7 +93,7 @@ h1 {
 }
 
 #a1 {
-    text-align: center;
+    text-align: left;
     
     margin-left: 47%;
     display: flex;
