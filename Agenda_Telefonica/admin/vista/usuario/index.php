@@ -12,10 +12,22 @@ if (!isset($_SESSION['isLogged']) || $_SESSION['isLogged'] === FALSE) {
     <meta charset="UTF-8">
     <title>Gestión de usuario-USUARIO</title>
     <script src="../../../js/buscarCedula.js" type="text/javascript"></script>
+    <link href="" rel="stylesheet" />
 
 </head>
 
 <body>
+<header class="enc1">
+                <img class="logo" src="../../../images/LOGO UPS -01.png" alt="Logo UPS" />
+                <div class="buscar" id="searchform">
+
+                </div>
+                <img class="icono" src="../../../images/usuario.png" alt="Usuario" />
+                <img class="icono" src="../../../images/charla.png" alt="Mensajes" />
+                <img class="icono" src="../../../images/mas.png" alt="Mas" />
+
+                <br><br><br><br>
+        </header>
 <center><h1>GESTION DE USUARIO---CONTROL USUARIO</h1></center>
 <?php
     $cod=$_GET["codigo"];
