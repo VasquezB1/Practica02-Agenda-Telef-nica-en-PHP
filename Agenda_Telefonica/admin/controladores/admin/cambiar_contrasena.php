@@ -6,6 +6,7 @@
 </head>
 <body>
 <?php
+//Creacion de Contraseñas
  //incluir conexión a la base de datos
  include '../../../config/conexionBD.php';
  $codigo = $_POST["codigo"];
