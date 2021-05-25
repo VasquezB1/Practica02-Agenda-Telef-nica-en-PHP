@@ -39,7 +39,7 @@ if (!isset($_SESSION['isLogged']) || $_SESSION['isLogged'] === FALSE) {
             <ul>
                 <li><a href="listar_usu_activos.php?codigo=<?php echo $cod ?>">Listar Usuarios Activos</a></li>
                 <li><a href="listar_usu_eliminados.php?codigo=<?php echo $cod ?>">Listar Usuarios Eliminados</a> </li>
-                <li><a href="../../../public/vista/buscar_cedula.html">Buscar Usuario por Cedula</a></li>
+                <li><a href="../../../public/vista/buscar_cedula.html">Buscar Usuario por Cedula</a></li>                
                 <li><a href="../../../public/vista/crear_usuario.html">Crear Usuario</a></li>
             </ul>
         </nav>
@@ -92,6 +92,7 @@ if (!isset($_SESSION['isLogged']) || $_SESSION['isLogged'] === FALSE) {
                 echo " <td> <a href=mailto:" . $row['usu_correo'] . ">" . $row['usu_correo'] . "</a></td>";
                 echo " <td>" . $row['usu_fecha_nacimiento'] . "</td>";
                 echo " <td>" . $row['usu_rol'] . "</td>";
+                echo " <td> <a href='agregar_telefono.php?codigo=" . $row['usu_codigo'] . "&codPer=" . $codigo . "'>Agregar Telefono</a> </td>";
                 echo " <td> <a href='eliminar.php?codigo=" . $row['usu_codigo'] . "&codPer=" . $codigo . "'>Eliminar</a> </td>";
                 echo " <td> <a href='modificar.php?codigo=" . $row['usu_codigo'] . "&codPer=" . $codigo . "'>Modificar</a> </td>";
                 echo " <td> <a href='cambiar_contrasena.php?codigo=" . $row['usu_codigo'] . "&codPer=" . $codigo . "'>Cambiar contraseña</a> </td>";

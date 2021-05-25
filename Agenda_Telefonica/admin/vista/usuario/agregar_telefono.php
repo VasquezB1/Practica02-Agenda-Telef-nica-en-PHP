@@ -2,68 +2,47 @@
 <html>
 
 <head>
-    <link href="../../../css/estilos1.css" rel="stylesheet" />
     <meta charset="UTF-8">
-    <title>Agregar Telefonos</title>
-    <script lenguage="javascript" type="text/javascript" src="../../../js/validaciones_usuarios.js "></script>
-    <style type="text/css">
+    <title>Crear Nuevo Telefono</title>
+    <style type="text/css" rel="stylesheet">
         .error {
             color: red;
-            font-size: 1.5em;
-        }
-
-        .bien {
-            color: black;
-            font-size: 2em;
         }
     </style>
 </head>
 
 <body>
-    <h1>Agregar Teléfonos</h1>
     <?php
-    session_start();
-    if (!isset($_SESSION['isLogged']) || $_SESSION['isLogged'] === FALSE) {
-        header("Location: /Agenda_Telefonica/public/vista/login.html");
+    //incluir conexión a la base de datos
+    include '../../../config/conexionBD.php';
+    $codigo = $_POST["codigo"];
+    //echo($codigo);
+    $telefono = isset($_POST["telefono"]) ? mb_strtoupper(trim($_POST["telefono"]), 'UTF-8') : null;
+    $tipo = isset($_POST["tipo"]) ? mb_strtoupper(trim($_POST["tipo"]), 'UTF-8') : null;
+    $operadora = isset($_POST["operadora"]) ? mb_strtoupper(trim($_POST["operadora"]), 'UTF-8') : null;
+    $sql = "INSERT INTO telefono VALUES (0, '$telefono', '$tipo', '$operadora','$codigo')";
+    //echo($sql);
+    if ($conn->query($sql) === TRUE) {
+        echo "<p>Se ha creado los datos personales correctamente!!!</p>";
+
+    } else {
+        if ($conn->errno == 1062) {
+            echo "<p class='error'>La persona con la cedula $cedula ya esta registrada en el sistema </p>";
+        } else {
+            echo "<p class='error'>Error: " . mysqli_error($conn) . "</p>";
+        }
     }
+
+
+
+
+
+
+    //cerrar la base de datos
+    $conn->close();
+    echo "<a  href='../admin/index.php?codigo=".$codigo."'>Regresar</a>";
+
     ?>
-    <?php
-    $codigo = $_GET["codigo"];
-    ?>
-    <form class="formu" id="formulario01" method="POST" action="../../controladores/usuario/agregar_telefono.php">
-
-        <input type="hidden" id="codigo" name="codigo" value="<?php echo $codigo ?>" />
-        <label for="telefono">Telefono (*)</label>
-        <input type="text" id="telefono" name="telefono" value="" placeholder="Ingrese su telefono" onkeyup="return validarTelefono(this)" />
-        <span id="mensajeTelefono" class="error"></span>
-        <br><br>
-
-        <label for="tipo">Tipo Telefono (*)</label>
-        <select class="select" id="tipo" name="tipo">
-            <option> </option>
-            <option>Convencional</option>
-            <option>Celular</option>
-        </select>
-        <span id="mensajeTipo" class="error"></span>
-        <br><br>
-
-        <label for="operadora">Operadora Telefono (*)</label>
-        <select class="select" id="operadora" name="operadora">
-            <option> </option>
-            <option>Movistar</option>
-            <option>Claro</option>
-            <option>CNT</option>
-            <option>Tuenti</option>
-            <option>ETAPA</option>
-        </select>
-        <span id="mensajeTipo" class="error"></span>
-        <br><br>
-
-
-
-        <input class="boton" type="submit" id="crear" name="crear" value="Crear" />
-        <input class="boton" type="reset" id="cancelar" name="cancelar" value="Cancelar" />
-    </form>
 </body>
 
 </html>

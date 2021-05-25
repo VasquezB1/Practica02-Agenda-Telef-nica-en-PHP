@@ -38,7 +38,7 @@ if (!isset($_SESSION['isLogged']) || $_SESSION['isLogged'] === FALSE) {
                 <li><a href="listar_telefonos_cel.php?codigo=<?php echo $cod ?>">Listar Telefonos Celulares</a></li>
                 <li><a href="listar_telefonos_con.php?codigo=<?php echo $cod ?>">Listar Telefonos Convecionales</a> </li>
                 <li><a href="../../../public/vista/buscar_cedula.html">Buscar Usuario por Cedula</a></li>
-                <li><a href="agregar_telefono.php?codigo=<?php echo $cod ?>">Agregar Telefono</a></li>
+                <li><a href="../admin/agregartele.php?codigo=<?php echo $cod ?>">Agregar Telefono</a></li>
                 <li><a href="modificar_usu.php?codigo=<?php echo $cod ?>">Modificar Datos</a></li>
                 <li><a href="cambiar_contrasena.php?codigo=<?php echo $cod ?>">Cambiar Contraseña</a></li>
             </ul>

@@ -4,6 +4,7 @@
 <head>
    <meta charset="UTF-8">
    <title>Eliminar datos de la persona</title>
+   <link href="../../../css/estilos1.css" rel="stylesheet" />
 </head>
 
 <body>
@@ -26,7 +27,7 @@
 
       while ($row = $result->fetch_assoc()) {
    ?>
-         <form id="formulario01" method="POST" action="../../controladores/admin/eliminar.php">
+         <form class="formu" id="formulario01" method="POST" action="../../controladores/admin/eliminar.php">
             <input type="hidden" id="codigo" name="codigo" value="<?php echo $codigo ?>" />
             <input type="hidden" id="codPer" name="codPer" value="<?php echo $codPer ?>" />
             <label for="cedula">Cedula (*)</label>
@@ -55,8 +56,8 @@
             <input type="text" id="rol" name="rol" value="<?php echo $row["usu_rol"]; ?>" disabled />
             <br>
 
-            <input type="submit" id="eliminar" name="eliminar" value="Eliminar" />
-            <input type="reset" id="cancelar" name="cancelar" value="Cancelar" />
+            <input class="boton" type="submit" id="eliminar" name="eliminar" value="Eliminar" />
+            <input class="boton" type="reset" id="cancelar" name="cancelar" value="Cancelar" />
          </form>
    <?php
       }

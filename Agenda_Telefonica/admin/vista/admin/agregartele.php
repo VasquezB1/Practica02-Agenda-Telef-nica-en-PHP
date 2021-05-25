@@ -30,7 +30,7 @@
     <?php
     $codigo = $_GET["codigo"];
     ?>
-    <form class="formu" id="formulario01" method="POST" action="../usuario/agregar_telefono.php">
+    <form class="formu" id="formulario01" method="POST" action="../../controladores/usuario/agregar_telefono.php">
 
         <input type="hidden" id="codigo" name="codigo" value="<?php echo $codigo ?>" />
         <label for="telefono">Telefono (*)</label>
